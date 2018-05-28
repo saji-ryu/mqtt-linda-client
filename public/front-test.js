@@ -1,6 +1,6 @@
 let tuple = {type: "test", name: "hoge", value: 20, where: "delta", cmd: "on",who:"saji"};
 
-let watchTuple = {type: "test", who:"saji",value:30};
+let watchTuple = {type: "test"};
 let linda = new mqttLinda();
 
 let settings = {

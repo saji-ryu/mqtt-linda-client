@@ -53,8 +53,8 @@ export default class mqttLindaClient {
         this.mqttClient.subscribe(stopic);
         this.mqttClient.on('message', (topic, message) => {
             let resdata = JSON.parse(message.toString());
-            let condition = JSON.parse(JSON.stringify(read_tuple));
-            if (this.diff_condition(resdata, condition)) {
+            //let condition = JSON.parse(read_tuple);
+            if (this.diff_condition(resdata, read_tuple)) {
                 callback(topic, resdata);
             }
         })
@@ -84,13 +84,24 @@ export default class mqttLindaClient {
 
     diff_condition(data, cond) {
         let result = true;
-        let delta = jsondiffpatch.diff(data, cond);
-        for (let p in delta) {
-            if (delta[p][2] == null) {
+        for (let k in cond){
+            if (!data[k]){
                 result = false;
+                break;
+            }else if(data[k] != cond[k]){
+                result = false;
+                break;
             }
         }
         return result;
+        // let result = true;
+        // let delta = jsondiffpatch.diff(data, cond);
+        // for (let p in delta) {
+        //     if (delta[p][2] == null) {
+        //         result = false;
+        //     }
+        // }
+        // return result;
     }
 
     get_settings() {
