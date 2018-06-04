@@ -1,9 +1,7 @@
 import mqtt from "mqtt";
 import 'babel-polyfill';
-import * as JSONDiffPatch from "jsondiffpatch";
 import * as axios from "axios";
 
-const jsondiffpatch = JSONDiffPatch.create();
 
 export default class mqttLindaClient {
     constructor() {
@@ -94,14 +92,6 @@ export default class mqttLindaClient {
             }
         }
         return result;
-        // let result = true;
-        // let delta = jsondiffpatch.diff(data, cond);
-        // for (let p in delta) {
-        //     if (delta[p][2] == null) {
-        //         result = false;
-        //     }
-        // }
-        // return result;
     }
 
     get_settings() {
