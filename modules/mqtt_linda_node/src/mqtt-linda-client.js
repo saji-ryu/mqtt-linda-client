@@ -7,7 +7,7 @@ export default class mqttLindaClient {
     constructor() {
         this.default_settings = {
             host: 'localhost',
-            port: 3000,
+            port: 1883,
             clientId: "clid"
         };
         this.topic_structure = ["type", "name", "where"];

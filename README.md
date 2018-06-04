@@ -1,6 +1,7 @@
 # mqtt-linda-client
 
 ## About
+this is a client library for [mqtt-linda](https://github.com/saji-ryu/mqtt-linda) server.
 
 ## How to use
 ### 
@@ -34,11 +35,11 @@ Browser(default)
         clientId: clid,    //set ClientId. It must be unique.
         tupleSpace: "tupleSpace"    //set tuplespace name
     }
-Node
+Node(default)
 
     const settings = {
         host : 'localhost'  //set mqtt-linda server's host name
-        port : 3000,    //set mqtt-linda server's mqtt-portnumber
+        port : 1883,    //set mqtt-linda server's mqtt-portnumber
         clientId: clid,    //set ClientId. It must be unique.
         tupleSpace: "tupleSpace"    //set tuplespace name
     }
