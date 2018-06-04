@@ -11,7 +11,7 @@ module.exports = {
         path: __dirname +'/dist',
         // 出力ファイル名
         filename: 'main.js',
-        library: "mqttLinda-browser",
+        library: "mqttLindaClient",
         libraryTarget: "amd",
         umdNamedDefine: true,
         globalObject: 'this'

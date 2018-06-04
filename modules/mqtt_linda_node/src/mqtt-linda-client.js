@@ -8,7 +8,7 @@ export default class mqttLindaClient {
         this.default_settings = {
             host: 'localhost',
             port: 3000,
-            clientId: "cl1"
+            clientId: "clid"
         };
         this.topic_structure = ["type", "name", "where"];
         this.tupleSpace = "tupleSpace";
