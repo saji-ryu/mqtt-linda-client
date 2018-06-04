@@ -4,7 +4,7 @@ module.exports = {
     mode: 'development',
 
     // メインとなるJavaScriptファイル（エントリーポイント）
-    entry: './main/index.js',
+    entry: './src/index.js',
     // ファイルの出力設定
     output: {
         //  出力ファイルのディレクトリ名
