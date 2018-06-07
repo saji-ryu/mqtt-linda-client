@@ -12,7 +12,7 @@ module.exports = {
         // 出力ファイル名
         filename: 'main.js',
         library: "mqttLindaClient",
-        libraryTarget: "amd",
+        libraryTarget: "umd",
         umdNamedDefine: true,
         globalObject: 'this'
     },

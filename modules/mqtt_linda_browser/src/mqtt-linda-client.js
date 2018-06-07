@@ -12,6 +12,7 @@ export default class mqttLindaClient {
         };
         this.topic_structure = ["type", "name", "where"];
         this.tupleSpace = "tupleSpace";
+        this.reconnecting = false;
 
     }
 
@@ -62,6 +63,10 @@ export default class mqttLindaClient {
         this.mqttClient.end();
     }
 
+    reconnect() {
+        this.mqttClient.reconnect();
+    }
+
     read_transform(t) {
         let topic_str = this.tupleSpace;
         for (let p of this.topic_structure) {
@@ -106,6 +111,7 @@ export default class mqttLindaClient {
     base_connect() {
         return new Promise((resolve, reject) => {
             this.mqttClient = mqtt.connect(this.option);
+            this.reconnecting =  this.mqttClient.reconnecting;
             resolve();
         })
     }

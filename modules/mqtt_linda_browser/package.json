@@ -1,0 +1,29 @@
+{
+  "name": "mqtt_linda_browser",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mqtt",
+    "linda"
+  ],
+  "author": "RyuseiSajiki",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "mqtt": "^2.18.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.8.3",
+    "webpack-cli": "^2.1.4"
+  }
+}
